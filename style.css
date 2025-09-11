@@ -60,7 +60,7 @@ header {
 header .navbar {
    background: linear-gradient(-45deg, #111518, #1e2d34 , #092532 , #022434);
    background-size: 400% 400%;
-   animation: gradientBG 15s ease infinite;
+   animation: gradientBG 20s ease infinite;
     position: fixed;
     width: 100%;
     z-index: 999; 
@@ -70,9 +70,13 @@ header .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
+    max-width: 1400px;
     margin: auto;
     padding: 25px 20px;
+}
+
+#home .navbar .fa-solid {
+  font-size: 30px;
 }
 
 #home .navbar nav ul {
@@ -82,7 +86,7 @@ header .navbar {
 
 }
 #home .navbar nav ul a {
-    margin: 0 20px;
+    margin: 0 25px;
     color: var(--text-coloer);
     font-weight: 600;
     font-size: 17px;
@@ -96,6 +100,63 @@ header .navbar {
     color: var(--secand-coloer);
 }
 
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 200px;
+    z-index: 999;
+    background-color:rgba(19, 59, 72, 0.2);
+    backdrop-filter: blur(12px);
+    display: none ;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+     opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.8s, transform 0.8s;
+ }
+
+.sidebar.open {
+  display: flex;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sidebar.close {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+ .sidebar ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+ }
+
+  .sidebar li {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 40px;
+ }
+
+ .sidebar a {
+  height: 100%;
+  width: 100%;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 300px;
+ }
+
+.sidebar a:hover {
+   background-color: rgba(255, 255, 255, 0.203);
+}
+  
 
 #home .header-content .content-text {
     margin-bottom: 50px;
@@ -761,7 +822,7 @@ header .navbar {
     text-align: center;
 }
 #home .navbar nav ul {
-   margin-top: 20px;
+   margin-top: 0px;
 }
 #home .navbar nav ul a {
   margin: 0 8px;
@@ -826,7 +887,13 @@ header .navbar {
 #contact .row img {
   max-width: 350px;
   margin: auto;
-}                          
+}   
+
+
+
+.hideOnMobile{
+  display: none;
+}
     }
 
 
@@ -839,8 +906,15 @@ header .navbar {
          
                                           /* --------------------- Header -------------------- */
 @media (max-width: 528px) {
-  #home .navbar nav ul a {
-    font-size: 14px;
+  
+
+.logo {
+    color: var(--text-coloer);
+    font-size: 24px;
+    font-weight: 600;
+    position: fixed;
+    right: 180px;
+
 }
 
 #home .header-content .hi {
@@ -860,6 +934,16 @@ header .navbar {
    font-size: 15px;
    font-weight: 700;
 }   
+
+.sidebar .fa-xmark {
+  font-size: 30px;
+}
+
+#home .navbar .fa-bars {
+  font-size: 30px;
+  position: fixed;
+  left: 328px;
+}
 
 
                                  /* --------------------- Skills -------------------- */ 

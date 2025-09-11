@@ -122,12 +122,6 @@ animates.forEach((el) => observer.observe(el));
 
 
 
-
-
-
-
-
-
 const canvas = document.getElementById('particles-bg');
 const ctx = canvas.getContext('2d');
 let particles = [];
@@ -161,8 +155,8 @@ function drawParticles() {
     ctx.globalAlpha = p.alpha;
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-    ctx.fillStyle = "rgba(0, 238, 255, 0.28)";
-    ctx.shadowColor = "rgba(0, 238, 255, 0.29)";
+    ctx.fillStyle = "rgba(41, 117, 120, 1)";
+    ctx.shadowColor = "rgba(28, 200, 212, 1)";
     ctx.shadowBlur = 10;
     ctx.fill();
     ctx.restore();
@@ -176,3 +170,30 @@ function drawParticles() {
   requestAnimationFrame(drawParticles);
 }
 drawParticles();
+
+
+
+
+
+
+
+
+
+// ...existing code...
+
+function showSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'flex';
+  setTimeout(() => {
+    sidebar.classList.add('open');
+  }, 10); // allow display to apply before transition
+}
+
+function hideSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.classList.remove('open');
+  setTimeout(() => {
+    sidebar.style.display = 'none';
+  }, 800); // match the transition duration
+}
+// ...existing code...
