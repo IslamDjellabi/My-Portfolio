@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      line-height: 1.6;
+      background-image: url('imges/7074561_3552444.jpg'); /* Replace with your image URL */
+      background-size: cover;   /* Makes it cover the whole page */
+      background-position: center; /* Keeps it centered */
+      background-repeat: no-repeat; /* Prevents tiling */
+    }
+
+    header {
+      background: #0a3d62;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header .logo1 {
+      width: 129px;
+      right: 33px;
+      top: 10px;
+      position: absolute;
+    }
+
+    header .logo2 {
+      width: 129px;
+      left: 33px;
+      top: 10px;
+      position: absolute;
+    }
+    
+   header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      word-spacing: 5px;
+    }
+    header h2 {
+      margin: 0.2rem 0 0;
+      font-size: 1.6rem;
+      font-weight: bold;
+       word-spacing: 5px;
+    }
+
+    header h3{
+      margin: 0.1rem 0 0;
+      font-size: 1.1rem;
+      font-weight: bold;
+       word-spacing: 1px;
+    }
+
+    nav {
+      background: #3c6382;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a:hover {
+      background: #00980dbe;
+    }
+     nav ul {
+      display: flex;
+      list-style-type: none;
+     }
+
+     main h1 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 30px ;
+     }
+
+      nav a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+      font-size: 20px;
+      font-weight: 600;
+      margin-left: 20px;
+      display: block;
+    }
+    nav a:hover {
+      background: #00980dbe;
+    }
+
+    .sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background-color:rgba(102, 134, 140, 0.173);
+  backdrop-filter: blur(22px);
+  box-shadow: -2px 0 8px rgba(0,0,0,0.07);
+  z-index: 9999;
+  padding: 24px 16px;
+  overflow-y: auto;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+   opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.sidebar.open {
+  display: flex;
+  opacity: 1;
+  transform: translateX(0);
+  margin-top: 0%;
+}
+
+ nav .fa-solid {
+  font-size: 30px;
+ }
+
+ nav .fa-bars {
+  font-size: 30px;
+  position: relative;
+  top: 2px;
+  right: 2px;
+ }
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar li {
+  margin-bottom: 16px;
+  list-style-type: none;
+}
+
+.sidebar a {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 30px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.sidebar a:hover {
+  background: #00980dbe;
+  color: #fff;
+}
+
+     main p {
+      text-align: center;
+     }
+
+     footer {
+      background: #0a3d62;
+      color: rgb(255, 255, 255);
+      font-size: medium;
+      text-align: center;
+      padding: 1px;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      margin: 5px 0;
+      word-spacing: 2px;
+    }
+    
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 600px;
+    }
+    main {
+      padding: 1rem;
+    }
+
+     #map-container {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* The map iframe */
+    #student-map {
+      border: 0;
+      width: 100%;
+      height: 600px;
+    }
+
+   
+   #fullscreen-btn {
+      position: absolute;
+      top: 16px;
+      left: 1083px;
+      z-index: 999;
+      padding: 8px 14px;
+      background: #006400;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+    }
+
+    :fullscreen #fullscreen-btn {
+    left: auto;
+    right: 16px;
+}
+
+    #fullscreen-btn:hover {
+      background: #004d00;
+    }
+    #fullscreen-btn:hover {
+      background: #004d00;
+    }
+
+     #logo-overlay img {
+      height: 30px;
+    }
+
+    :fullscreen #student-map {
+      height: 100%;
+    }
+
+
+
+
+
+
+
+
+
+    @media (max-width: 528px) {
+  .hideOnMobile{
+  display: none;
+}
+  body, html {
+    padding: 0 ;
+    margin: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+   body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+   }
+ 
+
+
+  header {
+    padding: 0.5rem;
+    font-size: 2rem;
+    position: relative;
+  }
+
+  header .logo1,
+  header .logo2 {
+    width: 50px;
+    top: 6px;
+    position: absolute;
+  }
+  header .logo1 { right: 10px; }
+  header .logo2 { left: 10px; }
+
+  header h1 {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    word-spacing: 2px;
+  }
+  header h2 {
+    font-size: 0.6rem;
+    margin-top: 4px;
+    word-spacing: 2px;
+  }
+  header h3 {
+    font-size: 0.6rem;
+    margin-top: 2px;
+    word-spacing: 1px;
+  }
+
+  nav {
+    padding: 0.5rem 0;
+    font-size: 0.5rem;
+    position: relative;
+  }
+  nav a {
+    font-size: 0px;
+    padding: 0rem;
+    margin-left: 0;
+    margin-bottom: 0px;
+  }
+
+   footer {
+   font-size: 8px;
+        padding: 5px 0px;
+        margin: 0px;
+        max-width: 100%;
+        background: #0a3d62;
+        color: #fff;
+        text-align: center;
+       
+
+  }
+  footer p {
+    word-spacing: 1px;
+    margin: 1px 0;
+  }
+
+  .sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 190px;
+  height: 100vh;
+  background-color:rgba(102, 134, 140, 0.173);
+  backdrop-filter: blur(22px);
+  box-shadow: -2px 0 8px rgba(0,0,0,0.07);
+  z-index: 9999;
+  padding: 24px 16px;
+  overflow-y: auto;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+   opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+
+
+ nav .fa-solid {
+  font-size: 20px;
+ }
+
+ nav .fa-bars {
+    font-size: 20px;
+    position: absolute;
+    top: 6px;
+    right: 13px;
+
+    
+ }
+
+.sidebar a {
+  display: block;
+  width: 100%;
+  padding: 20px 14px;
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+}
+#map-container {
+      position: relative;
+      width: 100%;
+      max-width:400px;
+      margin: auto;
+    }
+
+    /* The map iframe */
+    #student-map {
+      border: 0;
+      width: 100%;
+      height: 300px;
+    }
+
+   
+   #fullscreen-btn {
+     position: absolute;
+        top: 16px;
+        left: 254px;
+        width: 88px;
+        z-index: 999;
+        padding: 5px 10px;
+        background: #006400;
+        color: white;
+        font-weight: 700;
+        border: none;
+        font-size: 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    :fullscreen #fullscreen-btn {
+    left: auto;
+    right: 16px;
+}
+
+    #fullscreen-btn:hover {
+      background: #004d00;
+    }
+    #fullscreen-btn:hover {
+      background: #004d00;
+    }
+
+     #logo-overlay img {
+      height: 30px;
+    }
+
+    :fullscreen #student-map {
+      height: 100%;
+    }
+
+
+}
